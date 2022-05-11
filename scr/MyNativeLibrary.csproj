@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDynamicLoading>true</EnableDynamicLoading> <!-- Required to native library --> 
+    <DnneAddGeneratedBinaryToProject>true</DnneAddGeneratedBinaryToProject> <!-- Required to native library --> 
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DNNE" Version="1.*" /> <!-- Required to native library --> 
+  </ItemGroup>
+
+</Project>
