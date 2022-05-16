@@ -9,6 +9,7 @@ Based on [AaronRobinsonMSFT/DNNE](https://github.com/AaronRobinsonMSFT/DNNE)
 
 - .NET 6.0
 - Phyton 3.10 (for sample)
+- Go 1.18.2 (for sample)
 
 
 ## How it works
@@ -71,4 +72,12 @@ To test the Python sample, run the command bellow:
 
 ```
 python samples/python/run.py
+```
+
+### Test Go Sample
+
+To test the Go sample, run the command bellow:
+
+```
+go run samples/go/run.go
 ```
