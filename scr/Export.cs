@@ -11,9 +11,15 @@ public class Export
      * - Must be public and static
      */
 
-    [UnmanagedCallersOnlyAttribute]
-    public static int Sum(int a, int b) => a + b;
+    [UnmanagedCallersOnlyAttribute(EntryPoint = "MyLibSum")]
+    public static int MyLibSum(int a, int b) 
+    {
+        return a + b;
+    }
 
-    [UnmanagedCallersOnlyAttribute]
-    public static int Sub(int a, int b) => a - b;
+    [UnmanagedCallersOnlyAttribute(EntryPoint = "MyLibSub")]
+    public static int MyLibSub(int a, int b) 
+    {
+        return a - b;
+    }
 }

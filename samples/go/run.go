@@ -10,7 +10,7 @@ func main() {
 	fmt.Println("Hello, world!")
 
 	var mod = syscall.NewLazyDLL("output/MyNativeLibraryNE.dll")
-	var proc = mod.NewProc("Sum")
+	var proc = mod.NewProc("MyLibSum")
 
 	ret, _, _ := proc.Call(
 		uintptr(1),
