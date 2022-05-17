@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <EnableDynamicLoading>true</EnableDynamicLoading> <!-- Required to native library --> 
     <DnneAddGeneratedBinaryToProject>true</DnneAddGeneratedBinaryToProject> <!-- Required to native library --> 
+    <DnneSelfContained_Experimental>true</DnneSelfContained_Experimental>
   </PropertyGroup>
 
   <ItemGroup>
