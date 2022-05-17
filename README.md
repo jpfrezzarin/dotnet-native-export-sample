@@ -10,6 +10,7 @@ Based on [AaronRobinsonMSFT/DNNE](https://github.com/AaronRobinsonMSFT/DNNE)
 - .NET 6.0
 - Phyton 3.10 (for sample)
 - Go 1.18.2 (for sample)
+- [clang](https://clang.llvm.org/) (for builds in linux and macOS)
 
 
 ## How it works
@@ -44,13 +45,27 @@ public static int Sum(int a, int b)
 }
 ```
 
-## Test Samples
+## Build
 
-To test the present samples, first, builds the `scr/MyNativeLibrary.csproj`.
+To build the solution, run the command bellow in terminal:
 
 ```
 dotnet build scr/MyNativeLibrary.csproj -o output
 ```
+
+## Publish
+
+To build the solution, run the command bellow in terminal:
+
+```
+dotnet publish scr/MyNativeLibrary.csproj -o output -c Release -r {SID} --self-contained
+```
+
+Where SID is dotnet runtime (e.g.: `win-x64`, `linux-x64`)
+
+## Test
+
+> To test the samples, first, builds or publish the solution
 
 ### Test .NET Sample
 
@@ -68,16 +83,28 @@ dotnet samples/dotnet/output/DotnetSample.dll
 
 ### Test Python Sample
 
-To test the Python sample, run the command bellow:
+To test the Python sample in Windows,, run the command bellow:
 
 ```
-python samples/python/run.py
+python samples/python/windows.py
+```
+
+To test the Python sample in a Linux distribution, run the command bellow:
+
+```
+python3 run samples/python/linux.py
 ```
 
 ### Test Go Sample
 
-To test the Go sample, run the command bellow:
+To test the Go sample in Windows, run the command bellow:
 
 ```
-go run samples/go/run.go
+go run samples/go/windows.go
+```
+
+To test the Go sample in a Linux distribution, run the command bellow:
+
+```
+go run samples/go/linux.go
 ```
